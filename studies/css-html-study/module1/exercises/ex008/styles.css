@@ -1,0 +1,21 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font: normal 12pt Roboto;
+    background: rgb(107, 194, 129);
+}
+
+section {
+    width: auto;
+    background: rgb(240, 240, 240);
+    border-radius: 30px;
+    padding: 50px;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(240, 240, 240);
+}

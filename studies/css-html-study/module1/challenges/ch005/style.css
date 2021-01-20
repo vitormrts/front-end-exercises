@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font: normal 12pt Roboto;
+    background: rgba(78, 188, 240, 0.747);
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    background: rgb(218, 218, 218);
+    margin: auto;
+    border-radius: 18px;
+
+    text-align: center;
+    padding: 20px;
+}
+
+
+#photo {
+    border-radius: 20%;
+}
