@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding values</title>
+    <style>
+        body 
+        {
+            font: normal 18pt Arial; 
+        }
+
+        input
+        {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#resultado
+        {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Adding values</h1>
+    <input type="number" name="txt-n1" id="txt-n1"> +
+    <input type="number" name="txt-n2" id="txt-n2">
+    <input type="button" id = "botao" value="Sum">
+    <div id="resultado">
+        Resultado
+    </div>
+
+    <script>
+        var btn = window.document.querySelector("input#botao")
+            
+        btn.addEventListener("click", somar)
+
+        function somar()
+        {
+            var tn1 = window.document.querySelector("input#txt-n1")
+            var tn2 = window.document.querySelector("input#txt-n2")
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var res = window.document.querySelector("div#resultado")
+
+            var sum = n1 + n2
+
+            res.innerHTML = `A soma entre ${n1} e ${n2} eh <strong>${sum}</strong>`
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Document Object Model
+    </title>
+    <style>
+        body
+        {
+            background-color:rgb(119, 118, 184);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Starting DOM studies
+    </h1>
+    <p>
+        Here's the result
+    </p>
+    <p>
+        Learning use <strong>DOM</strong> in JavaScript
+    </p>
+    <div class="msg">
+        Click on me
+    </div>
+    <script>
+        /*var body = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById("msg")
+
+        p1.style.color = 'black'
+        body.style.background = 'blue'
+        d.style.background = 'green'
+
+        window.document.write("Copy: " + p1.innerHTML)
+        d.innerText = "Changing div..."
+        */ 
+
+        // # is id
+        // . is class
+
+       var d = window.document.querySelector('div.msg')
+       d.style.color = 'blue'
+       d.style.background = 'white'
+    </script>
+</body>
+</html>

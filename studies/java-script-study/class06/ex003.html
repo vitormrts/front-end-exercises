@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First script</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 20pt Arial
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        Hello World!
+    </h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste dolore laborum a autem officia quae voluptatem vitae aut commodi, nobis veniam facere rerum quibusdam voluptates eligendi in atque placeat deleniti!
+    </p>
+    <script>
+        var n1 = window.prompt("Type it a number");
+        var n2 = window.prompt("Type it another number");
+        var sum = Number.parseInt(n1) + Number.parseFloat(n2);
+        window.alert(`${n1} + ${n2} = ${sum}`)
+    </script>
+</body>
+</html>

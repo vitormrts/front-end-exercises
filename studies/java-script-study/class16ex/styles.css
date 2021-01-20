@@ -1,0 +1,58 @@
+body
+{
+    background: rgb(126, 126, 255);
+    font: normal 18pt Arial;
+}
+
+header
+{
+    color: rgb(235, 235, 235);
+    text-align: center;
+
+
+}
+
+select
+{
+    width: 150px;
+}
+
+section
+{
+    background: rgb(235, 235, 235);
+    margin: auto;
+    width: 500px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 18px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.459);
+}
+
+input
+{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+div
+{
+    padding: 12px;
+    font: normal 16pt Arial;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input#adicionar
+{
+    width: 100px;
+    height: 22px;
+    margin-top: 50px;
+    align-content: center;
+}
+
+footer
+{
+    color: rgb(235, 235, 235);
+    text-align: center;
+    font-style: italic;
+}

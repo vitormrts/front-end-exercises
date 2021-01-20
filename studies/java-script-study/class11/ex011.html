@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou estrangeiro</title>
+</head>
+<body>
+    <h1>Verificador de cidadania</h1>
+    <input type="text" id="cid">
+    <button id="verificar">Verificar</button>
+    <div id="res"></div>
+
+    <script>
+        var btn = document.querySelector("button#verificar")
+        btn.addEventListener("click", verificar)
+
+
+        function verificar()
+        {
+            var res = document.querySelector("div#res")
+            var cid = document.querySelector("input#cid")
+            res.innerHTML = `Por ter nascido em ${cid.value}, voce e `
+
+            if (cid == 'Brasil')
+            {
+                res.innerHTML += 'Brasileiro'
+            }
+            else
+            {
+                res.innerHTML += 'Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
