@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', Arial;
 }
 
 .container {
@@ -15,39 +21,267 @@
 .content {
     border-radius: 15px;
     background-color: #ffffff;
-    border-radius: 15px;
-    width: 80%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
+    position: relative;
+
+}
+
+.content::before {
+    content: "";
+    background-color: #272b3f;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .first-content {
-    display: flex;
+        /* display: flex; */
+    display: none;
+    position: absolute;
 }
 
 .second-content {
+    /* display: flex; */
     display: none;
     position: absolute;
+}
+
+.third-content {
+    display: flex;
+    /* display: none; */
+    /* position: absolute; */
+}
+
+.title {
+    font-size: 28px;
+    text-align: start;
+    font-weight: 900;
+}
+
+.title-team {
+    margin-top: 32px;
+    margin-left: 32px;
+    color: #fff;
+}
+
+.title-sign {
+    color: #272b3f;
+    margin-left: 70px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    border-style: none;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0px 0.5px rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.a-link {
+    color: rgb(228, 168, 58);
+    text-decoration: none;
+}
+
+.a-link:hover {
+    font-weight: bold;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    width: min-content;
+    white-space: nowrap;
+    align-self: center;
+    font-size: 13px;
+    font-weight: normal;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.form input {
+    height: 45px;
+    border: none;
+    color:  #272b3f;
+    width: 100%;
+
+}
+
+.list-social-media {
+    margin-bottom: 20px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.item-social-media {
+    color: #bdc3c7;
+    border: 1px solid  #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.item-social-media:hover {
+    background-color: rgba(245, 181, 61, 0.829);
+    border-color: rgba(245, 181, 61, 0.829);
+    color:#fff;
+}
+
+.item-social-media:not(:first-child) { /*nao aplica a margem para o primeiro li*/
+    margin-left: 10px;
+}
+
+.label-input {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #EBEBEB;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-modify {
+    color: #bdc3c7;
+    padding: 7px;
+}
+
+.btn-sign-up {
+    background-color: #7BB4F8;
+    transition: background-color 0.2s;
+    box-shadow: 0px 2px 3px  #919191;
+}
+
+.btn-sign-up:hover {
+    background-color: #0073ff;
+
+}
+
+.btn-sign-in {
+    background-image: linear-gradient(#F0AE4B, #f0ae4bc4);
+    transition: background-color 0.2s;
+}
+
+.btn-sign-in:hover {
+    background: rgb(252, 164, 0);
+    color: #fff;
+}
+
+.btn-sign-in-recuperated {
+    background: rgb(173, 173, 173);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+
+.btn-sign-in-recuperated:hover {
+    background-color: #797979;
+}
+
+.label-recuperated {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.description {
+    color: hsl(228, 12%, 54%);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.description-team {
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+.description-sign {
+    margin-left: 70px;
+    margin-top: 8px;
+}
+
+#continue {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#continue::before {
+    content: "";
+    height: 1px;
+    margin-right: 15px;
+    width: 100%;
+    align-self: center;
+    background-color: hsla(229, 12%, 54%, 0.76);
+}
+
+
+
+::placeholder {
+    font-size: 14px;
+    color:hsla(229, 12%, 54%, 0.76);
+}
+
+#continue::after {
+    content: "";
+    height: 1px;
+    margin-left: 15px;
+    width: 100%;
+    align-self: center;
+    background-color: hsla(229, 12%, 54%, 0.76);
 }
 
 .first-column {
-    flex: 1 0 auto;
-    z-index: 1;
+    flex: 1;
 }
 
 .second-column {
-    flex: 1 0 auto;
-    background-color: #373C56;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    height: 100%;
+
 }
 
 .account {
     text-align: center;
+    color: hsl(228, 12%, 54%);
+    font-size: 12px;
+    margin-bottom: 20px;
+    align-self: initial;
 }
 
+.logo-team {
+    align-self: center;
+    justify-items: center;
+    width: 370px;
+}
+
+#img-logo {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
