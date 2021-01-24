@@ -36,7 +36,7 @@
     }
   
     @else {
-      @media (min-width: ($point / 16) + 'em') {
+      @media (max-width: ($point / 16) + 'em') {
         @content;
       }
     }

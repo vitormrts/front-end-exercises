@@ -11,18 +11,35 @@ $layout-name: "l-header";
     display: flex;
     grid-template-columns: 1fr 10fr 1fr;
 
+    @include breakpoint(small-only) {
+        background-image: url("/assets/mobile/image-hero.jpg");
+        background-size: cover;
+        background-position: top bottom;
+        height: 100vh;
+    }
+
     &__top {
         padding: 80px 8% 0 8%;
         justify-content: flex-start;
         width: 100%;
         display: flex;
+
+        @include breakpoint(755) {
+            display: flex;
+        }
     }
 
-    img {
+    #img-logo {
         flex: 1;
         width: 180px;
         height: 35px;
+
+        @include breakpoint(755) {
+            flex: none;
+            
+        }
     }
+
 
     &__c-list {
         color: white;
@@ -31,6 +48,11 @@ $layout-name: "l-header";
         right: 0;
         flex: 10;
         display: flex;
+
+        @include breakpoint(755) {
+            position: absolute;
+            display: none;
+        }
     }
 
     &__item:not(:first-child) {
@@ -41,9 +63,14 @@ $layout-name: "l-header";
         align-self: center;
         display: flex;
 
+        @include breakpoint(755) {
+            height: 100%;
+            text-align: center;
+        }
+
         h2 {
             position: relative;
-            align-self: center;
+
             padding: 40px 160px 40px 40px;
             border: 2px solid white;
             width: max-content;
@@ -54,9 +81,38 @@ $layout-name: "l-header";
             font-size: 50px;
             color: white;
             text-transform: uppercase;
+            transform: translate(-50%, 50%);
+
             @include breakpoint(1350) {
-                transform: translate(-50%, 50%);
+                transform: translate(-20%, 50%);
             }
+
+            @include breakpoint(1150) {
+                transform: translate(0%, 50%);
+            }
+
+            @include breakpoint(755) {
+                font-size: 38px;
+                padding: 40px;
+                margin: 0 auto;
+                transform: translate(0%, 0%);
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        @include breakpoint(755) {
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
+        
+        img {
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 70%;
         }
     }
 }

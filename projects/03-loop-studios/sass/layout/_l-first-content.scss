@@ -2,27 +2,49 @@ $layout-name: "l-first-content";
 
 .#{$layout-name} {
     display: flex;
-    background-image: url("../../assets/desktop/image-interactive.jpg");
-    background-repeat: no-repeat;
+
 
     @include breakpoint(large-up) {
+        background-image: url("../../assets/desktop/image-interactive.jpg");
+        background-repeat: no-repeat;
         height: rem(500);
     }
 
+    @include breakpoint(large-only) {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
     &__auxiliar-before {
-        @include breakpoint(large-up) {
-            width: 560px;
+        @include breakpoint(medium-up) {
+            width: 500px;
+        }
+
+        @include breakpoint(large-only) {
+            background-image: url('/assets/mobile/image-interactive.jpg');
+            background-repeat: no-repeat;
+            align-self: center;
+            height: rem(500);
+            width: rem(500);
         }
     }
 
     &__marketing {
-        @include breakpoint(large-up) {
+        @include breakpoint(medium-up) {
             padding-top: 100px;
             padding-left: 100px;
             width: 30%;
             z-index: 10;
             align-self: flex-end;
         }
+
+        @include breakpoint(large-only) {
+            padding: 0px;
+            width: 50%;
+            align-self: center;
+        }
+
         font-family: Josefin Sans;
         background-color: $white-pastel;
     }
@@ -31,6 +53,10 @@ $layout-name: "l-first-content";
         text-transform: uppercase;
         font-weight: lighter;
         font-size: 38px;
+
+        @include breakpoint(large-only) {
+            text-align: center;
+        }
     }
 
     &__description {
@@ -39,5 +65,8 @@ $layout-name: "l-first-content";
         margin-top: 25px;
         font-weight: bold;
         line-height: 1.5;
+        @include breakpoint(large-only) {
+            text-align: center;
+        }
     }
 }
