@@ -1,0 +1,17 @@
+$layout-name: "l-footer";
+
+.#{$layout-name} {
+    background-color: rgb(0, 0, 0);
+    grid-area: footer;
+
+    display: flex;
+    flex-direction: column;
+    height: rem(100);
+
+    &__social-media {
+        height: rem(70);
+    }
+    &__info {
+        height: rem(30);
+    }
+}

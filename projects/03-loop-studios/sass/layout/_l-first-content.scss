@@ -1,0 +1,43 @@
+$layout-name: "l-first-content";
+
+.#{$layout-name} {
+    display: flex;
+    background-image: url("../../assets/desktop/image-interactive.jpg");
+    background-repeat: no-repeat;
+
+    @include breakpoint(large-up) {
+        height: rem(500);
+    }
+
+    &__auxiliar-before {
+        @include breakpoint(large-up) {
+            width: 560px;
+        }
+    }
+
+    &__marketing {
+        @include breakpoint(large-up) {
+            padding-top: 100px;
+            padding-left: 100px;
+            width: 30%;
+            z-index: 10;
+            align-self: flex-end;
+        }
+        font-family: Josefin Sans;
+        background-color: $white-pastel;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 38px;
+    }
+
+    &__description {
+        font-size: 14px;
+        color: hsl(0, 0%, 55%);
+        margin-top: 25px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+}
