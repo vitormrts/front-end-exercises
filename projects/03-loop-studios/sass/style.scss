@@ -4,14 +4,13 @@ $white-pastel: rgb(224, 224, 224);
     @return $pixels/16 + rem;
 }
 
-@import 'abstract/breakpoints';
-@import 'layout/l-header';
-@import 'layout/l-main';
-@import 'layout/l-footer';
-@import 'layout/l-first-content';
-@import 'layout/l-second-content';
-@import 'layout/l-games';
-
+@import "abstract/breakpoints";
+@import "layout/l-header";
+@import "layout/l-main";
+@import "layout/l-footer";
+@import "layout/l-first-content";
+@import "layout/l-second-content";
+@import "layout/l-games";
 
 * {
     padding: 0;
@@ -19,20 +18,14 @@ $white-pastel: rgb(224, 224, 224);
     box-sizing: border-box;
 }
 
-
-
 .wrapper {
     font-family: Alata;
     background-color: $white-pastel;
     display: grid;
 
-
-        grid-template-areas:
+    grid-template-areas:
         "header header header"
         ".      main   .     "
         "footer footer footer";
-        grid-template-columns: 1fr 10fr 1fr;
-    
-
-
+    grid-template-columns: 1fr 10fr 1fr;
 }

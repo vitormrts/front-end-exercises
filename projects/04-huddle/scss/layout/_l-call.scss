@@ -1,0 +1,138 @@
+.l-call {
+    text-align: center;
+    &:not(.l-call::before) {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    position: relative;
+
+    &__title {
+        font: 700 4rem Poppins;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        line-height: 2.7rem;
+        min-width: 200px;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    &__btn {
+        margin-top: 60px;
+        background-color: var(--color-primary);
+        font-weight: 700;
+        border-style: none;
+        color: var(--color-background);
+        padding: 20px 70px;
+        font-size: 1.6rem;
+        border-radius: 25px;
+
+        @include breakpoint(460) {
+            padding: 15px 40px;
+        }
+    }
+
+    &__img-mockups {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 90px;
+    }
+
+    &__info {
+        margin-top: 80px;
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+
+        @include breakpoint(780) {
+            flex-direction: column;
+        }
+    }
+
+    &__info-data {
+        flex: 1;
+        display: flex;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        flex-direction: column;
+        position: relative;
+
+        img {
+            width: 40px;
+            order: -1;
+        }
+
+        h2 {
+            text-align: start;
+            font-weight: 700;
+            font-size: 7.7rem;
+        }
+
+        p {
+            color: gray;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        &.communities {
+            display: grid;
+            grid-template-areas:
+                ". img ."
+                ". h2 ."
+                ". p .";
+            grid-template-columns: 1fr auto 1fr;
+
+            img {
+                grid-area: img;
+            }
+            h2 {
+                grid-area: h2;
+            }
+            p {
+                grid-area: p;
+            }
+
+            @include breakpoint(780) {
+                margin-top: 100px;
+                margin-bottom: 180px;
+            }
+        }
+
+        &.messages {
+            display: grid;
+            grid-template-areas:
+                ". img ."
+                ". h2 ."
+                ". p .";
+            grid-template-columns: 1fr auto 1fr;
+
+            img {
+                grid-area: img;
+            }
+
+            h2 {
+                grid-area: h2;
+            }
+
+            p {
+                grid-area: p;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 172px;
+        left: 0;
+        bottom: 0;
+        background-image: url("../../assets/desktop/bg-section-top-desktop-1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

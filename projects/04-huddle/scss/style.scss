@@ -1,0 +1,54 @@
+$projects-colors: (
+    "primary": hsl(322, 100%, 66%),
+    "secondary": hsl(321, 100%, 78%),
+    "warning": hsl(0, 100%, 63%),
+    "text": hsl(192, 100%, 9%),
+    "background": hsl(207, 100%, 98%)
+);
+
+@import "abstract/breakpoints";
+
+@import "layout/l-header";
+@import "layout/l-main";
+@import "layout/l-call";
+@import "layout/l-footer";
+@import "layout/l-utilities";
+
+
+
+
+
+:root {
+    @each $name, $color in $projects-colors {
+        --color-#{$name}: #{$color};
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem equivale a 10px*/
+    font-size: 62.5%;
+
+    @include breakpoint(460) {
+        font-size: 55%;
+    }
+}
+
+.container {
+    font-size: 1.6rem;
+    font-family: Open Sans;
+    color: var(--color-text);
+    background-color: white;
+}
+
+
+
+
+
+
+
