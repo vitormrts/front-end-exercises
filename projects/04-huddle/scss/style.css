@@ -25,6 +25,14 @@
   padding-bottom: 8px;
   text-transform: capitalize;
   color: var(--color-primary);
+  cursor: pointer;
+}
+
+.l-header__btn:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .l-main {
@@ -66,12 +74,21 @@
   padding: 20px 70px;
   font-size: 1.6rem;
   border-radius: 25px;
+  -webkit-box-shadow: 0px 5px 10px #cc66cc;
+          box-shadow: 0px 5px 10px #cc66cc;
+  cursor: pointer;
 }
 
 @media (max-width: 28.75em) {
   .l-call__btn {
     padding: 15px 40px;
   }
+}
+
+.l-call__btn:hover {
+  background-color: var(--color-secondary);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .l-call__img-mockups {
@@ -211,7 +228,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+  height: 600px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   position: relative;
   padding: 5%;
 }
@@ -219,13 +239,21 @@
 .l-footer::before {
   content: "";
   background-image: url("../../assets/desktop/bg-footer-top-desktop.svg");
-  background-color: blue;
+  background-color: white;
   top: 0;
+  background-size: cover;
   left: 0;
   width: 100%;
   background-repeat: no-repeat;
-  height: 20%;
+  height: 210px;
+  z-index: 10;
   position: absolute;
+}
+
+@media (max-width: 59.6875em) {
+  .l-footer::before {
+    background-image: url("../../assets/mobile/bg-footer-top-mobile.svg");
+  }
 }
 
 @media (max-width: 59.6875em) {
@@ -238,6 +266,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 900px;
   }
 }
 
@@ -336,6 +365,18 @@
   margin-bottom: 15px;
 }
 
+@media (max-width: 41.875em) {
+  .l-footer h2 {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 50em) {
+  .l-footer h2 {
+    margin-top: 150px;
+  }
+}
+
 .l-footer button {
   margin-left: 30px;
   background-color: var(--color-primary);
@@ -345,6 +386,15 @@
   padding: 8px 40px;
   font-size: 1.6rem;
   border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 3px #cc66cc;
+          box-shadow: 0px 2px 3px #cc66cc;
+  cursor: pointer;
+}
+
+.l-footer button:hover {
+  background-color: var(--color-secondary);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 59.6875em) {
@@ -526,6 +576,15 @@
   padding: 20px 70px;
   font-size: 1.6rem;
   border-radius: 25px;
+  -webkit-box-shadow: 0px 5px 10px #cc66cc;
+          box-shadow: 0px 5px 10px #cc66cc;
+  cursor: pointer;
+}
+
+.l-utilities__btn:hover {
+  background-color: var(--color-secondary);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 28.75em) {

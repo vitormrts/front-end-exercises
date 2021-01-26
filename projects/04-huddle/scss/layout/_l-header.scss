@@ -24,5 +24,12 @@
         padding-bottom: 8px;
         text-transform: capitalize;
         color: var(--color-primary);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+            transition: 0.3s;
+        }
     }
 }
