@@ -1,11 +1,17 @@
 .l-utilities {
     position: relative;
+
+    h2 {
+        font-family: Poppins;
+        font-size: 3.8rem;
+    }
+
     &__item {
         display: flex;
         flex: 1;
         align-items: center;
         justify-content: space-around;
-        padding:13% 15% 0 15%;
+        padding: 13% 15% 0 15%;
 
         @include breakpoint(1050) {
             flex-direction: column;
@@ -15,9 +21,6 @@
         &.c-first {
             background-color: var(--color-background);
             position: relative;
-
-            &::before {
-            }
         }
 
         &.c-second {
@@ -31,11 +34,33 @@
         }
 
         &.c-third {
-            background-image: url("../../assets/desktop/bg-section-top-desktop-2.svg");
-            // background-color: var(--color-background);
-            background-color: blue;
-            background-repeat: no-repeat;
-            background-size: contain;
+            position: relative;
+            background-color: var(--color-background);
+            &::before {
+                content: "";
+                width: 100%;
+                height: 160px;
+                position: absolute;
+                top: 0;
+                background-image: url("../../assets/desktop/bg-section-top-desktop-2.svg");
+                background-color: white;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+                @include breakpoint(1236) {
+                    height: 20%;
+                }
+
+                @include breakpoint(810) {
+                    height: 10%;
+                }
+
+                @include breakpoint(390) {
+                    height: 5%;
+                }
+
+            }
         }
 
         img {
@@ -59,16 +84,56 @@
             }
         }
 
-        h2 {
-            font-family: Poppins;
-            font-size: 3.8rem;
-        }
-
         p {
             margin-top: 20px;
             line-height: 2.7rem;
         }
+    }
 
+    &__start {
+        position: relative;
+        height: 800px;
 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            height: 300px;
+
+            background-image: url('../../assets/desktop/bg-section-bottom-desktop-2.svg');
+            background-repeat: no-repeat;
+            background-color: white;
+            height: 20%;
+            
+            background-size: cover;
+            top: 0;
+            width: 100%;
+            position: absolute;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        background-color: var(--color-primary);
+        font-weight: 700;
+        border-style: none;
+        min-width: 200px;
+        margin-top: 30px;
+        margin: 0 auto;
+        justify-content: center;
+        color: var(--color-background);
+        padding: 20px 70px;
+        font-size: 1.6rem;
+        border-radius: 25px;
+
+        @include breakpoint(460) {
+            padding: 15px 40px;
+        }
     }
 }
